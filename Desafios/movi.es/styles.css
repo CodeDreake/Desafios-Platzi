@@ -1,0 +1,155 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header header"
+                       "main main";
+}
+/*Empieza el header*/
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.7);
+  grid-area: header;
+}
+.containerLogo{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.containerLogo p{
+  font-size: 3rem;
+  color: transparent;
+  -webkit-text-stroke: 1px red;
+  font-weight: bold;
+  text-align: center;
+}
+.containerSearch{
+  display: flex;
+  align-items: center;
+}
+.containerSearch form input{
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 1.4rem;
+  outline: none;
+}
+.containerProfile{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.containerProfile p{
+  font-size: 1.6rem;
+}
+.imgPerfil{
+  width: 50px;
+  background-color: #cccccc;
+  border-radius: 50%;
+}
+.imgPerfil:hover{
+  width: 60px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.7);
+}
+
+/*Empieza el main*/
+main{
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "aside main";
+}
+.aside-home{
+  grid-area: aside;
+  background-color: salmon;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.container-iconsNav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+/*Emmpieza el section main de las peliculas*/
+.section-main{
+  padding: 0 15px 15px;
+  grid-area: main;
+  gap: 10px;
+}
+.subTitulos{
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.post{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 95%;
+}
+.post:hover{
+  width: 96%;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.7);
+}
+.post-image{
+  margin: 0;
+}
+.post-image img{
+  width: 100%;
+  vertical-align: top;
+}
+.post-overlay{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr 10% 30%;
+  grid-template-areas: "none"
+                       "postTitulo"
+                       "postLorem";
+}
+.post-titulo, .post-lorem{
+  display: block;
+  background-color: rgba(120, 0, 0, 0.5);
+  padding: 0 5px;
+}
+.post-titulo{
+  grid-area: postTitulo;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.post-lorem{
+  grid-area: postLorem;
+}
+.sectionCategorias{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}

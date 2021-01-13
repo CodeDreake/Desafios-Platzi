@@ -1,0 +1,236 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+main{
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-areas: "aside content";
+}
+/*Empieza el aside*/
+.containerAside{
+  background-color: rgb(5, 5, 58);
+  grid-area: aside;
+  height: 100%;
+  padding: 20px 15px 0 15px;
+}
+.logo{
+  font-weight: bold;
+  font-size: 3.5rem;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+.titulo-myPlaylist{
+  color: white;
+  font-size: 2.4rem;
+  margin: 20px 0 10px 0;
+}
+.list-myPlaylist{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 25px auto;
+}
+.list-myPlaylist li{
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: white;
+}
+.list-myPlaylist p{
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: white;
+}
+.list-playlistFriends{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  color: white;
+  font-size: 2.1rem;
+}
+.imgFriends{
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.list-playlistFriends li{
+  margin-bottom: 5px;
+}
+.list-playlistFriends p{
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.configuraciones{
+  margin-top: 80px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+
+/*Empieza el content*/
+.containerContent{
+  grid-area: content;
+}
+
+
+/*Empieza el section del Video*/
+.containerVideo{
+  padding: 15px;
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-rows: auto auto;
+  box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
+}
+.video{
+  display: flex;
+  justify-content: center;
+}
+.containerVideo-datos{
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.containerVideo-datosBotones{
+  display: flex;
+  justify-content: space-between;
+}
+.containerVideo-datosBotones-izquierda{
+  display: flex;
+}
+.tituloVideo{
+  font-size: 2rem;
+}
+.vistas{
+  font-size: 1.5rem;
+  color: rgb(65, 65, 65);
+}
+.containerVideo-datosBotones button{
+  border: none;
+  background-color: indigo;
+  color: white;
+  border-radius: 35px;
+  height: 30px;
+  padding: 6px 5px 10px 5px;
+  margin-right: 20px;
+}
+.buttonShare{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+.buttonShare p{
+  font-size: 1.3rem;
+}
+.buttonSave{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonSave img{
+  width: 26px;
+}
+.buttonSave p{
+  font-size: 1.3rem;
+}
+.categorias{
+  list-style: none;
+  display: flex;
+}
+.categorias li{
+  margin-right: 5px;
+  color: white;
+  background-color: violet;
+  height: 26px;
+  font-size: 1.4rem;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+/*Empieza el section de comentarios*/
+.containerSecond{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.containerComentarios{
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 1;
+  padding: 30px 20px;
+  height: 100vh;
+}
+.containerComentarios > p{
+  font-size: 1.8rem;
+  color: rgb(65, 65, 65);
+  margin-bottom: 10px;
+}
+.containerMiComentario{
+  display: flex;
+  align-items: center;
+  background-color: #9c96963a;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 5px 1px rgb(0, 0, 0, 0.3);
+  width: auto;
+  margin-bottom: 15px;
+}
+.miComentario_img{
+  width: 30px;
+  border-radius: 30px;
+  border: 1px solid gray;
+  margin-right: 6px;
+}
+.miComentario_input{
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.listaComentarios{
+  list-style: none;
+}
+.listaComentario_items{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.listaComentario_items-img{
+  width: 40px;
+  border-radius: 30px;
+  border: 1px solid gray;
+  margin-right: 6px;
+}
+.listaComentario_items > span{
+  font-size: 1.2rem;
+}
+
+
+/*Empieza el section de sugerencias*/
+.containerSugerencias{
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+}
+.containerSugerencias > p{
+  font-size: 1.8rem;
+  color: rgb(65, 65, 65);
+  margin-bottom: 10px;
+}
+.containerSugerencias_items{
+  margin-bottom: 35px;
+}
+.containerSugerencias_items img{
+  width: 15vw;
+}
+.containerSugerencias_items p{
+  margin-top: 5px;
+  font-size: 1.4rem;
+}
