@@ -369,6 +369,7 @@ main{
   padding: 20px 10px;
 }
 .planes-container--slider{/*Slider de las cards*/
+  width: 100%;
   display: flex;
   gap: 5px;
   height: 316px;
